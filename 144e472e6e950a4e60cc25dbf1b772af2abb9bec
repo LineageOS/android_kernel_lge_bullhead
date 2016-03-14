@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "dfbec78f_6cbc93bb",
+        "filename": "arch/arm64/configs/cyanogenmod_bullhead_defconfig",
+        "patchSetId": 1
+      },
+      "lineNbr": 311,
+      "author": {
+        "id": 3075
+      },
+      "writtenOn": "2016-03-14T02:31:09Z",
+      "side": 1,
+      "message": "this might need to go",
+      "revId": "144e472e6e950a4e60cc25dbf1b772af2abb9bec",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
