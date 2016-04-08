@@ -1601,8 +1601,7 @@
 			39 01 00 00 00 00 05 2A 00 00 04 37
 			39 01 00 00 00 00 05 2B 00 00 07 7F
 			23 01 00 00 00 00 02 FB 01
-			05 01 00 00 65 00 02 11 00
-			05 01 00 00 29 00 02 29 00];
+			05 01 00 00 65 00 02 11 00];
 		qcom,mdss-dsi-off-command = [
 	        05 01 00 00 00 00 02 28 00
 	        05 01 00 00 3d 00 02 10 00];
@@ -1642,6 +1641,18 @@
 
 		qcom,partial-update-enabled;
 		qcom,panel-roi-alignment = <0 0 16 16 1080 0>;
+
+		cm,mdss-livedisplay-cabc-cmd = [
+			15 01 00 00 10 00 02 55 00];
+		cm,mdss-livedisplay-cabc-ui-value = <0x01>;
+		cm,mdss-livedisplay-cabc-image-value = <0x02>;
+		cm,mdss-livedisplay-cabc-video-value = <0x03>;
+		cm,mdss-livedisplay-sre-weak-value = <0x50>;
+		cm,mdss-livedisplay-sre-medium-value = <0x60>;
+		cm,mdss-livedisplay-sre-strong-value = <0x70>;
+		cm,mdss-livedisplay-aco-value = <0x80>;
+		cm,mdss-livedisplay-post-cmd = [
+			05 01 00 00 10 00 02 29 00];
 	};
 
 	dsi_jd35695b_1080p_cmd_type10: qcom,mdss_dsi_jd35695b_1080p_cmd_type10 {
@@ -2415,8 +2426,7 @@
 			39 01 00 00 00 00 05 2A 00 00 04 37
 			39 01 00 00 00 00 05 2B 00 00 07 7F
 			23 01 00 00 00 00 02 FB 01
-			05 01 00 00 65 00 02 11 00
-			05 01 00 00 29 00 02 29 00];
+			05 01 00 00 65 00 02 11 00];
 		qcom,mdss-dsi-off-command = [
 	        05 01 00 00 00 00 02 28 00
 	        05 01 00 00 3d 00 02 10 00];
@@ -2456,5 +2466,17 @@
 
 		qcom,partial-update-enabled;
 		qcom,panel-roi-alignment = <0 0 16 16 1080 0>;
+
+		cm,mdss-livedisplay-cabc-cmd = [
+			15 01 00 00 10 00 02 55 00];
+		cm,mdss-livedisplay-cabc-ui-value = <0x01>;
+		cm,mdss-livedisplay-cabc-image-value = <0x02>;
+		cm,mdss-livedisplay-cabc-video-value = <0x03>;
+		cm,mdss-livedisplay-sre-weak-value = <0x50>;
+		cm,mdss-livedisplay-sre-medium-value = <0x60>;
+		cm,mdss-livedisplay-sre-strong-value = <0x70>;
+		cm,mdss-livedisplay-aco-value = <0x80>;
+		cm,mdss-livedisplay-post-cmd = [
+			05 01 00 00 10 00 02 29 00];
 	};
 };
