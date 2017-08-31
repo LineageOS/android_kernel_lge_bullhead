@@ -59,6 +59,12 @@ static int sdcardfs_d_revalidate(struct dentry *dentry, unsigned int flags)
 	lower_dentry = lower_path.dentry;
 	lower_cur_parent_dentry = dget_parent(lower_dentry);
 
+	// Check if we are above mountpoint
+	if (parent_lower_dentry->d_sb != lower_cur_parent_dentry->d_sb) {
+		err = 1;
+		goto out;
+	}
+
 	spin_lock(&lower_dentry->d_lock);
 	if (d_unhashed(lower_dentry)) {
 		spin_unlock(&lower_dentry->d_lock);
