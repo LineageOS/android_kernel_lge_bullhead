@@ -176,17 +176,7 @@ int sdcardfs_interpose(struct dentry *dentry, struct super_block *sb,
 {
 	int err = 0;
 	struct inode *inode;
-	struct inode *lower_inode;
-	struct super_block *lower_sb;
-
-	lower_inode = lower_path->dentry->d_inode;
-	lower_sb = sdcardfs_lower_super(sb);
-
-	/* check that the lower file system didn't cross a mount point */
-	if (lower_inode->i_sb != lower_sb) {
-		err = -EXDEV;
-		goto out;
-	}
+	struct inode *lower_inode = lower_path->dentry->d_inode;
 
 	/*
 	 * We allocate our new inode below by calling sdcardfs_iget,
